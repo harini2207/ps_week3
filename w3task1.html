@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colortext</title>
+    </head>
+<body>
+    <p class="c">This is a Paragraph1</p>
+    <p class="c">This is a Paragraph2</p>
+    <p class="c">This is a Paragraph3</p>
+    <p class="c">This is a Paragraph4</p>
+    <p class="c">This is a Paragraph5</p>
+    <p class="c">This is a Paragraph6</p>
+    <button onclick="red()">Change</button>
+    <script>
+        var x = 0;
+        function red() {
+            let y = document.getElementsByClassName("c");
+            x += 1;
+            if (x % 2) {
+                for (let i = 0; i < y.length; i+=2) {
+                    y[i].style.color = "red";
+                }
+            }
+            else {
+                for (let i = 0; i < y.length; i+=2) {
+                    y[i].style.color = "black";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

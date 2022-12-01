@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>num to words</title>
+</head>
+<style>
+    .s{
+        width: 11%;
+        padding: 10px 3px;
+        border: 1px solid black;
+        margin: 0;
+    }
+</style>
+<body>
+    <input id="numberInput">
+    <p> </p>
+    <div><button onclick="Convert()">Convert</button></div>
+    <br>
+    <div id="result" class="s"></div>
+</body>
+<script>
+    function Convert (){
+        let numberInput = document.querySelector('#numberInput').value ;
+        let myDiv = document.querySelector('#result');
+    
+        let oneToTwenty = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ',
+        'eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
+        let tenth = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
+    
+        if(numberInput.toString().length > 3) return myDiv.innerHTML = 'out of range' ;
+        console.log(numberInput);
+        let num = ('000'+ numberInput).slice(-3).match(/^(\d{1})(\d{2})$/);
+        console.log(num);
+        if(!num) return myDiv.innerHTML = 'Enter a number';
+    
+        let outputText =num[1] != 0 ? (oneToTwenty[Number(num[1])]) +'hundred ': ''; 
+        outputText +=num[2] != 0 ? (oneToTwenty[Number(num[2])] || `${tenth[num[2][0]]} ${oneToTwenty[num[2][1]]} `) : 'zero'; 
+        myDiv.innerHTML = outputText;
+    }
+</script>

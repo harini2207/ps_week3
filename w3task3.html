@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table id="table" border="1" style="border-collapse:collapse;">
+        </table>
+        <script>
+            var array = [["Group Id", "Project Name"],
+    ["G6", "Develop a Software for Categorization of cases"],
+    ["G8", "Develop a Software for Categorization of cases"],
+    ["G41", "Crowd Sourcing model for preparing large question banks"],
+    ["G47", "Crowd Sourcing model for preparing large question banks"],
+    ["G30", "Online project platform for sharing"],
+    ["G26", "Online project platform for sharing"],
+    ["G33", "Centralized grievance system portal"],
+    ["G38", "Centralized grievance system portal"]];
+                table = document.getElementById("table");
+           for(var i = 0; i < array.length; i++)
+           {
+               var newRow = table.insertRow(table.length);
+               for(var j = 0; j < array[i].length; j++)
+               {
+                   var cell = newRow.insertCell(j);
+                   cell.innerHTML = array[i][j];
+               }
+           }
+        </script>
+    </body>
+</html>

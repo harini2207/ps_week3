@@ -1,0 +1,61 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    background-image: url('bg.webp');
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: sans-serif;
+}
+.container{
+    position:relative;
+    margin-top: 100px;
+    width:450px;
+    height:auto;
+    background-color: aliceblue;
+    border-radius:5px;
+}
+.label{
+    padding:20px 100px;
+    font-size:35px;
+    font-weight: bold;
+    color:black;
+    text-align: center;
+}
+.login_form{
+    padding:20px 50px 40px;
+}
+.login_form .efont{
+    font-size: 18px;
+    margin:5px;
+    
+}
+.login_form input{
+    height:40px;
+    width:350px;
+    padding:0px 5px;
+    font-size:18px;
+    border:1px solid silver;
+
+}
+.login_form .font2{
+    margin-top: 30px;
+}
+.login_form button{
+    margin:40px 0px 30px 0;
+    height:45px;
+    width:360px;
+    font-size:larger;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.login_form #username_error,
+.login_form #password_error{
+   color:red;
+   text-align: center;
+   display:none;
+} 
+
